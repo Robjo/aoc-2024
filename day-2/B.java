@@ -19,9 +19,15 @@ public class B {
                     list.add(Integer.valueOf(digit));
                 }
 
-                if (isValid(list)) {
-                    sum++;
+                for (int i = 0; i < list.size(); i++) {
+                    List<Integer> tryList = new ArrayList<Integer>(list);
+                    tryList.remove(i);
+                    if (isValid(tryList)) {
+                        sum++;
+                        break;
+                    }
                 }
+
                 list.clear();
             }
             System.out.println(sum);
@@ -33,18 +39,17 @@ public class B {
 
     private static boolean isValid(List<Integer> list) {
         boolean checkAscending = list.get(1) - list.get(0) > 0;
-        int counter = 0;
         for (int i = 1; i < list.size(); i++) {
             int diff = list.get(i) - list.get(i - 1);
             int diffSize = Math.abs(diff);
             if (checkAscending) {
                 if (diff < 0 || diffSize > 3 || diffSize < 1)
-                    counter++;
+                    return false;
             } else {
                 if (diff > 0 || diffSize > 3 || diffSize < 1)
-                    counter++;
+                    return false;
             }
         }
-        return counter <= 1;
+        return true;
     }
 }
