@@ -1,5 +1,30 @@
-# Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,java
-# Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,java
+# Created by https://www.toptal.com/developers/gitignore/api/java,haskell,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=java,haskell,visualstudiocode
+
+### Haskell ###
+dist
+dist-*
+cabal-dev
+*.o
+*.hi
+*.hie
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+cabal.project.local
+cabal.project.local~
+.HTF/
+.ghc.environment.*
 
 ### Java ###
 # Compiled class file
@@ -46,5 +71,4 @@ replay_pid*
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,java
-
+# End of https://www.toptal.com/developers/gitignore/api/java,haskell,visualstudiocode
